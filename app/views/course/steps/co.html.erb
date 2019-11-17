@@ -1,0 +1,31 @@
+<%= form_for @course, method: :put, :html => {class: "form-horizontal ui form", role: "form"},url: wizard_path do |f| %>
+
+    <div class="form-group">
+    <%= f.label :co1, "Course Objective 1"%>
+    <%= f.text_area :co1, placeholder:"Enter Course Objective"%>      
+    </div>
+    
+    <div class="form-group">
+    <%= f.label :co2, "Course objective 2"%>
+    <%= f.text_area :coursecode, placeholder:"Enter Course Code"%>
+    </div>
+
+    <div class="form-group">
+    <%= f.label :co3, "Course Objective 3"%>
+    <%= f.text_area :co3, placeholder:"Enter Course Code"%>      
+    </div>
+
+    <div class="form-group">
+    <%= f.label :co4, "Course Objective 4"%>
+    <%= f.text_area :co4, placeholder:"Enter Course Code"%>      
+    </div>
+
+    <div class="form-group">
+    <%= f.label :co5, "Course Objective 5"%>
+    <%= f.text_area :co5, placeholder:"Enter Course Code"%>      
+    </div>
+
+    <%= link_to 'last step', next_wizard_path ,class: "btn btn-primary" %>
+
+<% end %>
+ 

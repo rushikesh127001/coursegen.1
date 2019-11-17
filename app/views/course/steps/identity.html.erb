@@ -1,0 +1,59 @@
+<%-# form_for(:session, html: {class: "ui form",role: "form"}, url: login_path) do |f| -%>
+<%= form_for @course, method: :put, :html => {class: "form-horizontal ui form", role: "form"},url: wizard_path do |f| %>    
+
+    <div class="form-group">    
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">            
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Select Program...</option>
+                <option value="1">CSE</option>
+                <option value="2">EVCE</option>
+                <option value="3">ISE</option>
+                <option value="4">mech</option>
+                <option value="5">ele</option>
+            </select>
+            </div>
+        </div>    
+    </div>
+
+
+
+    <div class="form-group">
+      <%= f.label :coursecode, "Course Code"%>
+      <%= f.text_field :coursecode, placeholder:"Enter Course Code"%>      
+      <%= f.select :coursecode, ['option1', 'option2']%>
+
+    </div>
+
+    <div class="form-group">
+      <%= f.label :coursetitle, "Course Title"%>
+      <%= f.text_field :coursetitle, placeholder:"Enter Course Title"%>      
+    </div>    
+
+    <div class="form-group">
+      <%= f.label :semester, "Semester"%>
+      <%= f.text_field :semester, placeholder:"Enter Semester In Digit"%>      
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :email, "Section"%>
+      <%= f.text_field :section, placeholder:"Enter Section"%>      
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :subject, "Subject"%>
+      <%= f.text_field :subject, placeholder:"Enter Subject"%>      
+    </div>    
+    <div class="form-group">
+      <%= f.label :modulecoordinator1, "module coordinator 1"%>
+      <%= f.text_field :modulecoordinator1, placeholder: "enter name"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :modulecoordinator2, "module coordinator 2"%>
+      <%= f.text_field :modulecoordinator2, placeholder: "enter name"%>
+    </div>
+
+     <%- #f.submit "next",class: "btn btn-primary" -%>
+     <%= link_to 'nexxt', next_wizard_path ,class: "btn btn-primary" %>
+   <% end %>

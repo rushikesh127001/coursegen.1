@@ -1,0 +1,2 @@
+module Course::StepsHelper
+end
